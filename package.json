@@ -10,8 +10,15 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "faker": "^5.5.3",
+    "firebase": "^9.6.1",
+    "moment": "^2.29.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-i18n": "^8.26.7",
+    "vue-mugen-scroll": "^0.2.6",
+    "vue-router": "^3.0.1",
+    "vuetify": "^2.6.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
