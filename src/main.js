@@ -4,11 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import firebase from 'firebase'
-import 'firebase/firestore';
-import firebaseConfig from './config/firebase'
-firebase.initializeApp(firebaseConfig)
-export const db = firebase.firestore()
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from "firebase/firestore";
+import firebaseConfig from './config/firebase';
+
+initializeApp(firebaseConfig);
+export const db = getFirestore();
+
+
+import i18n from './config/i18n'
 
 Vue.config.productionTip = false
 
@@ -16,6 +20,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  i18n,
   components: { App },
   template: '<App/>'
 })
